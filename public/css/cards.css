@@ -1,0 +1,159 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative; */
+    /* background-color: green; */
+}
+/* side bar */
+
+.main {
+    /* display: flex;
+    flex-direction: row;
+    position: relative; */
+    /* position: relative;
+    width: 100%;
+    height: 100%; */
+}
+
+.side_bar {
+
+
+    box-sizing: border-box;
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    /* padding: 24px 24px 32px; */
+    /* gap: 32px; */
+    background-color: #09006F;
+    position: absolute;
+    width: 70px;
+    height: 100%;
+    margin-left: 0px;
+    /* background: #09090A; */
+    left: 0px;
+    /* Gray Shades/Dark shade
+
+    Used as Sub text and for Darkmode input and container background 
+    */
+    border-right: 1px solid #1F1F22;
+    top: 0px;
+    /* position: relative; */
+}
+
+/* .fa fa-home{
+    font-size: 5px;
+    size: 2px;
+    m,arg
+} */
+
+/* .fa-solid fa-house {
+    font-size: 10px;
+} */
+
+.img-logo {
+    color: #8F00FF;
+    font-size: 30px;
+    text-align: center;
+    width: 40px;
+    padding: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+
+.img-logo:hover {
+    /* padding: 5px; */
+    background-color: #3D0099;
+    /* opacity: 50%; */
+    border-radius: 5px;
+    transition: 200ms;
+}
+
+.home {
+    margin-top: 50px;
+    background-color: #3D0099;
+    opacity: 50%;
+    border-radius: 5px;
+    /* transition: 200ms; */
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    position:  static;
+    width: 99%;
+    justify-content: space-between;
+}
+
+.table {
+    /* width: 1000px; */
+    /* height: 300px; */
+    border: 1px solid black;
+    margin: auto;
+    /* background-color: darkgrey; */
+    position: absolute;
+    border-radius: 5px;
+    background-color: antiquewhite;
+    top: 100px;
+    left: 400px;
+    padding: 0px;
+    align-items: center;
+}
+
+#cards {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 1;
+    border-collapse: collapse;
+    align-items: center;
+    text-align: center;
+    box-shadow: 20px 20px 40px rgba(60, 60, 150, 0.25);
+    /* margin: auto; */
+}
+
+
+tr, th, tbody, td {
+    /* border: 1px solid black; */
+    padding: 3px 5px;
+}
+
+td {
+    width: 100px;
+}
+
+thead {
+    border: 1px solid black;
+    background-color: #3a338b;
+}
+
+.TableButton {
+    border: 0px;
+    width: 200px;
+}
+
+.delete-btn {
+    width: 60px;
+    height: 30px;
+    text-align: center;
+    align-items: center;
+    border-radius: 8px;
+    background-color: rgb(231, 10, 99);
+    cursor: pointer;
+    /* padding: auto; */
+}
+
+.UID {
+    width: 500px;
+}

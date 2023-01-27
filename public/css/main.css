@@ -1,0 +1,41 @@
+body {
+    display: flex;
+    font-size: 10px;
+}
+
+.skill {
+    width: 160px;
+    height: 160px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.container {
+    width: 50px;
+    min-height: 10px;
+    max-height: 100px;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    background-color: white;
+    margin: auto;
+
+    overflow: hidden;
+}
+
+h2 {
+    display: inline;
+    text-align: center;
+}
+
+#value {
+    display: inline;
+    margin: auto;
+    font-size: 12px;
+    padding: 0px;
+}
+
+#temp-icon {
+    font-size: 15px;
+    margin: auto;
+    color: red;
+}

@@ -1,0 +1,81 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="font/fontawesome-free-6.2.1-web/fontawesome-free-6.2.1-web/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <main class="_main">
+        <div class="side_bar">
+            <a href="/" class="img-logo"><i class="fa-brands fa-stack-overflow"></i></a>
+            <a href="/" class="img-logo home"><i class="fa-solid fa-house"></i></a>
+            <a href="https://www.facebook.com/Computer.Engineering.Embedded.Club" class="img-logo"><i class="fa-solid fa-chart-simple"></i></a>
+            <a href="/IDcards" class="img-logo"><i class="fa-solid fa-id-card"></i></a>
+        </div>
+        <div class="content">
+            <div class="device">
+                <div class="box">
+                        <i class="fa-solid fa-lightbulb" id="light-logo"></i>
+                        <h2>LIVING ROOM</h2>
+                        <input type="checkbox" id="living-room-light" class="switch">
+                </div>
+                <div class="box">
+                    <i class="fa-solid fa-lightbulb" id="light-logo"></i>
+                        <h2>BED ROOM</h2>
+                        <input type="checkbox" id="bed-room-light" class="switch">
+                </div>
+                <div class="box">
+                    <i class="fa-solid fa-lightbulb" id="light-logo"></i>
+                        <h2>KITCHEN</h2>
+                        <input type="checkbox" id="kitchen-light" class="switch">
+                </div>
+                <div class="box">
+                    <i class="fa-solid fa-fan" id="fan-logo"></i>
+                        <h2>BED ROOM</h2>
+                        <input type="checkbox" id="bed-room-fan" class="switch">
+                </div>
+                <div class="box">
+                    <i class="fa-solid fa-fan" id="fan-logo"></i>
+                        <h2>KITCHEN</h2>
+                        <input type="checkbox" id="kitchen-fan" class="switch">
+                </div>
+            </div>
+            <div id="block">
+                <div class="container">
+                    <!-- <i class="fa-solid fa-temperature-three-quarters" class="temp"> 50<span>&#8451;</span></i>
+                    <i class="fa-solid fa-droplet" class="temp"> 50%</i> -->
+                    <div class="display" id="temperature">
+                        <div class="circular-progress-temperature">
+                          <div class="value-container-temperature">0</div>
+                        </div>
+                        <i class="fa-solid fa-temperature-three-quarters" class="icon"><span> Temperature</span></span></i>
+                    </div>
+                    <div class="display" id="humidity">
+                        <div class="circular-progress-humidity">
+                            <div class="value-container-humidity">0</span></div>
+                          </div>
+                          <i class="fa-solid fa-droplet" class="icon" id="humi"><span> Humidity</span></span></i>
+                    </div>
+                </div>
+
+                </div>
+                <div class="tags">
+                    <div class="fram">
+                        <i class="fa-solid fa-person-running logo"><span id="MOTION">MOTION</span></i>
+                        <h3 id="motion-text">Status: None</h3>
+                    </div>
+                    <div class="fram">
+                        <i class="fa-solid fa-fire logo"><span id="MOTION">GAS</span></i>
+                        <h3 id="gas-text">Status: None</h3>
+                    </div>
+                </div>
+            </div>
+    </main>
+    <script type="module" src="js/firebase.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"></script> -->
+</body>
+</html>
