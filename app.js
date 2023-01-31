@@ -7,6 +7,9 @@ const bodyParser = require('body-parser')
 const {initializeApp} = require("firebase/app")
 const { getDatabase, ref,set, onValue, update } = require("firebase/database")
 
+const { getFirestore, collection, getDoc, addDoc, doc, updateDoc, arrayUnion, arrayRemove, serverTimestamp } = require("firebase/firestore");
+
+
 const mainRouter = require('./routes/main')
 
 //update variable
@@ -27,12 +30,15 @@ const firebaseConfig = {
   // Initialize Firebase
 const FBapp = initializeApp(firebaseConfig);
 const RTDB = getDatabase(FBapp);
+const FSDB = getFirestore(FBapp)
 
 const lightRef = ref(RTDB,'Lights')
 const fanRef = ref(RTDB,'Fans')
 const sensorRef = ref(RTDB,'Sensor')
 const alarmRef = ref(RTDB,'Alarms')
 const cardRef = ref(RTDB,'cards')
+
+const sensorFSRef = doc(FSDB,'home','cards')
 
 
 
@@ -142,10 +148,21 @@ client.on('message',(topic,payload) => {
             Ref = cardRef
             break;
         case 'sensor':
-            updates['/Temperature'] = payloadJSON.Temperature
-            updates['/Humidity'] = payloadJSON.Humidity
+            updates['/Temperature'] = payloadJSON.temperature
+            updates['/Humidity'] = payloadJSON.humidity
             console.log(updates)
             Ref = sensorRef
+            updateDoc(sensorFSRef,{
+                data: arrayUnion({temperature: payloadJSON.temperature,
+                humidity: payloadJSON.humidity,
+                time: new Date()})
+            })
+            .then(res => {
+                console.log(res)
+            })
+            .catch(err=> {
+                console.log(err)
+            })
             break;
     }
 
@@ -158,6 +175,7 @@ client.on('message',(topic,payload) => {
 
 
 onValue(lightRef,(snapshoot) => {
+    console.log("Updating: ",updating)
     if (updating) {
         updating = false
         return
