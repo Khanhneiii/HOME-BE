@@ -79,7 +79,7 @@ function publishMessage(Client, type, data) {
 }
 
 client.on('connect', () => {
-    console.log('connected')
+    // console.log('connected')
     client.subscribe(SubTopic)
     // client.publish('HomeTopic','Connected')
     // publishMessage(client,"Connected",true)
@@ -256,5 +256,5 @@ onValue(fanRef, (snapshoot) => {
 
 
 app.listen(8080, () => {
-    console.log('Connected')
+    // console.log('Connected')
 })
