@@ -108,10 +108,10 @@ onValue(cardRef, (snapshoot) => {
     }
     if (snapshoot.exists()) {
         const cardList = snapshoot.val()
-        console.log(cardList)
+        // console.log(cardList)
         let payload = {}
 
-        payload.type = 'card'
+        payload.type = 'id'
         payload.id = cardList
 
         client.publish(PubTopic, JSON.stringify(payload))
