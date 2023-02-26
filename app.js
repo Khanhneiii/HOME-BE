@@ -202,7 +202,7 @@ client.on('message', (topic, payload) => {
                 })
             })
                 .then(res => {
-                    console.log(res)
+                    // console.log(res)
                 })
                 .catch(err => {
                     console.log(err)
